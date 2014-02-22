@@ -356,7 +356,7 @@ function split_quoted(str::String, splitter, limit::Integer, keep_empty::Bool)
         j, k = first(r), last(r)+1
     end
     if keep_empty || !done(str,i)
-        push!(strs, str[i:])
+        push!(strs, str[i:end])
     end
     return strs
 end
